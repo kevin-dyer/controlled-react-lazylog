@@ -184,7 +184,7 @@ export default class LazyLog extends Component {
     caseInsensitive: bool,
 
     searchText: string,
-    filterActive: bool
+    filterActive: bool,
   };
 
   static defaultProps = {
@@ -217,7 +217,7 @@ export default class LazyLog extends Component {
     highlightLineClassName: '',
     caseInsensitive: false,
     searchText: '',
-    filterActive: false
+    filterActive: false,
   };
 
   static getDerivedStateFromProps(
@@ -306,11 +306,11 @@ export default class LazyLog extends Component {
     }
 
     if (prevProps.searchText !== this.props.searchText) {
-      this.handleSearch(this.props.searchText)
+      this.handleSearch(this.props.searchText);
     }
 
     if (prevProps.filterActive !== this.props.filterActive) {
-      this.handleFilterLinesWithMatches(this.props.filterActive)
+      this.handleFilterLinesWithMatches(this.props.filterActive);
     }
   }
 
