@@ -182,6 +182,9 @@ export default class LazyLog extends Component {
      * Flag to enable/disable case insensitive search
      */
     caseInsensitive: bool,
+
+    searchText: string,
+    filterActive: bool
   };
 
   static defaultProps = {
@@ -213,6 +216,8 @@ export default class LazyLog extends Component {
     lineClassName: '',
     highlightLineClassName: '',
     caseInsensitive: false,
+    searchText: '',
+    filterActive: false
   };
 
   static getDerivedStateFromProps(
@@ -298,6 +303,14 @@ export default class LazyLog extends Component {
       this.props.onHighlight
     ) {
       this.props.onHighlight(this.state.highlight);
+    }
+
+    if (prevProps.searchText !== this.props.searchText) {
+      this.handleSearch(this.props.searchText)
+    }
+
+    if (prevProps.filterActive !== this.props.filterActive) {
+      this.handleFilterLinesWithMatches(this.props.filterActive)
     }
   }
 
