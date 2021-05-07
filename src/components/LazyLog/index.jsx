@@ -307,6 +307,10 @@ export default class LazyLog extends Component {
 
     if (prevProps.searchText !== this.props.searchText) {
       this.handleSearch(this.props.searchText);
+
+      if (!this.props.searchText) {
+        this.handleClearSearch();
+      }
     }
 
     if (prevProps.filterActive !== this.props.filterActive) {
