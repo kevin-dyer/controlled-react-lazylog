@@ -1,6 +1,6 @@
 {
-  "name": "controlled-react-lazylog",
-  "version": "1.0.0",
+  "name": "controlled-react-lazylog-altair",
+  "version": "1.0.1",
   "description": "Controllable React Lazy Logviewer",
   "license": "MPL-2.0",
   "repository": "kevin-dyer/controlled-react-lazylog",
